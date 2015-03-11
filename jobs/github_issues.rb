@@ -3,7 +3,7 @@ require 'rest-client'
 require 'json'
 require 'date'
  
-git_token = "2c428bd0bd323c066c9b291c40db0ed3f69c48a0"
+git_token = "cacd33fb23ba8a095d0c4e4dd1c4f11ade4bb8ef"
 git_owner = "neshmi"
 git_project = "projectmosul"
 git_issue_label = "LABELS,TO,TRACK"

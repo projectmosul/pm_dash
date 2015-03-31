@@ -8,11 +8,7 @@ key_secret = 'notasecret' # Password to unlock private key
 profile_id = '98619340' # Analytics profile ID.
 
 # Get the Google API client
-client = Google::APIClient.new(
-  :application_name => ENV['GOOGLE_APPLICATION_NAME'],
-  :application_version => '0.01'
-)
-
+client = Google::APIClient.new(application_name: 'Project Mosul', application_version: '0.01')
 visitors = []
 
 # Load your credentials for the service account

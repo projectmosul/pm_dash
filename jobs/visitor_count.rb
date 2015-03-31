@@ -8,7 +8,7 @@ key_secret = 'notasecret' # Password to unlock private key
 profileID = '98619340' # Analytics profile ID.
  
 # Get the Google API client
-client = Google::APIClient.new(:application_name => 'Project Mosul', :application_version => '0.01')
+client = Google::APIClient.new(application_name: 'Project Mosul', application_version: '0.01')
  
 # Load your credentials for the service account
 key = Google::APIClient::KeyUtils.load_from_pkcs12(key_file, key_secret)
@@ -29,7 +29,7 @@ SCHEDULER.every '1m', :first_in => 0 do
   analytics = client.discovered_api('analytics','v3')
  
   # Start and end dates
-  startDate = DateTime.now.strftime("%Y-%m-01") # first day of current month
+  startDate = DateTime.now.strftime("2015-02-01") # first day of current month
   endDate = DateTime.now.strftime("%Y-%m-%d")  # now
  
   # Execute the query

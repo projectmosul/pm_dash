@@ -21,7 +21,5 @@ SCHEDULER.every '1h', :first_in => 0 do |job|
  
     current_defects = issues.length
  
-    send_event('git_issues_labeled_defects', { current: current_defects })
-
- 
+    send_event('git_issues_labeled_defects', { current: current_defects }) 
 end # SCHEDULER

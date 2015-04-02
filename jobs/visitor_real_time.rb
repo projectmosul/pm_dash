@@ -1,5 +1,6 @@
 require 'google/api_client'
 require 'date'
+max_amount = 100
 
 # Update these to match your own apps credentials
 service_account_email = '834342898354-nqf8qs09j3ne1ojfqrce8kkg3qi41pef@developer.gserviceaccount.com' # Email of service account
@@ -36,7 +37,9 @@ SCHEDULER.every '1m', :first_in => 0 do
   })
 
   visitors << { x: Time.now.to_i, y: response.data.rows }
-
+  if visitors.size > max_amount
+    visitors.shift
+  end
   # Update the dashboard
   send_event('visitor_count_real_time', points: visitors)
 end

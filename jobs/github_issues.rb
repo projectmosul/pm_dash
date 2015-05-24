@@ -2,8 +2,6 @@ require 'rest-client'
 require 'json'
 require 'date'
  
-git_token = ENV['GIT_TOKEN']
-git_owner = ENV['GIT_OWNER']
 git_project = "projectmosul"
 git_issue_label = "LABELS,TO,TRACK"
  
@@ -11,7 +9,7 @@ git_issue_label = "LABELS,TO,TRACK"
 event_name = "git_issues_labeled_defects"
  
 ## the endpoint we'll be hitting
-uri = "https://api.github.com/repos/#{git_owner}/#{git_project}/issues?state=open&per_page=100&access_token=#{git_token}"
+uri = "https://api.github.com/repos/#{ENV['GIT_OWNER']}/#{git_project}/issues?state=open&per_page=100&access_token=#{ENV['GIT_TOKEN']}"
 
  
 SCHEDULER.every '1h', :first_in => 0 do |job|

@@ -27,7 +27,7 @@ SCHEDULER.every '1m', :first_in => 0 do
 
   # Execute the query
   response = client.execute(:api_method => analytics.data.realtime.get, :parameters => {
-    'ids' => "ga:" + profile_id,
+    'ids' => "ga:" + ENV['GOOGLE_PROFILE_ID'],
     'metrics' => "ga:activeVisitors",
   })
 

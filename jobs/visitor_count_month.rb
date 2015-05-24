@@ -28,7 +28,7 @@ SCHEDULER.every '1m', :first_in => 0 do
  
   # Execute the query
   visitCount = client.execute(:api_method => analytics.data.ga.get, :parameters => { 
-    'ids' => "ga:" + profileID, 
+    'ids' => "ga:" + ENV['GOOGLE_PROFILE_ID'], 
     'start-date' => startDate,
     'end-date' => endDate,
     # 'dimensions' => "ga:month",

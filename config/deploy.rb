@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'project_mosul_dash'
-set :repo_url, 'git@github.com:neshmi/pm_dash.git'
+set :repo_url, 'git@github.com:projectmosul/pm_dash.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

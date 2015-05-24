@@ -4,7 +4,7 @@ Dotenv.load
 require 'dashing'
 
 configure do
-  set :auth_token, 'YOUR_AUTH_TOKEN'
+  set :auth_token, ENV['SECRET']
   set :default_dashboard, 'project_mosul'
 
   helpers do

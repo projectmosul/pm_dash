@@ -3,7 +3,7 @@ require 'date'
 
 # Get the Google API client
 client = Google::APIClient.new(application_name: 'Project Mosul', application_version: '0.01')
-key_file = File.join 'lib','project-f22fdc45263f.p12' # File containing your private key
+key_file = File.join 'project-f22fdc45263f.p12' # File containing your private key
  
 # Load your credentials for the service account
 key = Google::APIClient::KeyUtils.load_from_pkcs12(key_file, ENV['GOOGLE_KEY_SECRET'])

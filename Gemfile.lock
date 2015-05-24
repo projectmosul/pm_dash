@@ -14,11 +14,21 @@ GEM
       multi_json (>= 1.0.0)
     backports (3.6.4)
     buftok (0.2.0)
+    capistrano (3.4.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.4)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-passenger (0.0.5)
+      capistrano (~> 3.0)
     certified (1.0.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.9.1)
+    colorize (0.7.7)
     daemons (1.2.2)
     dashing (1.3.4)
       coffee-script (~> 2.2.0)
@@ -80,12 +90,16 @@ GEM
     multi_json (1.11.0)
     multipart-post (2.0.0)
     naught (1.0.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.2)
     netrc (0.10.3)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.4.2)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
@@ -117,6 +131,10 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sshkit (1.7.1)
+      colorize (>= 0.7.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
@@ -145,6 +163,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano
+  capistrano-bundler
+  capistrano-passenger
   certified
   dashing
   google-api-client

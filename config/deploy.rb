@@ -10,7 +10,7 @@ set :passenger_restart_command, 'touch'
 set :passenger_restart_options, -> { "#{deploy_to}/current/tmp/restart.txt" }
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('project-f22fdc45263f.p12', '.env')
+set :linked_files, fetch(:linked_files, []).push('project-f22fdc45263f.p12', '.env', 'unicorn.rb')
 
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')
